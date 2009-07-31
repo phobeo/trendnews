@@ -55,7 +55,11 @@ function addAnimations() {
 }
 
 function scaleImages() {
-	// TODO
+	$(".item img").each(function() {
+    var wrapping = "<div style='overflow:hidden; height:60px; width:90px; float:left;'></div>";
+	  $(this).css("width", 90).css("height", "auto").wrap(wrapping);
+	  if($(this).height() < 60) $(this).css("height", '60').css("width", "auto");
+	});
 }
 
 
