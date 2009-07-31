@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<widget version="1.0" 
+        xmlns="http://www.w3.org/ns/widgets" 
+        id=""> 
+  <name>trendnews.info</name> 
+  <content src="rtve.html" type="text/html" /> 
+  <access network="true" /> 
+  <icon src="css/i/logo.png"/> 
+  <description>Seleccion social de noticias de actualidad</description> 
+</widget> 
+
