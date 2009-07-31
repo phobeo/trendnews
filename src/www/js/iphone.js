@@ -28,7 +28,7 @@ function loadResultList() {
 }
 
 function DeviceLoad() {
-  var url = "/rtve/sample.txt";
+  var url = "http://trendnews.info/rtve/sample.txt";
   $.getJSON(url, function(data) {
     Results = data;
     loadResultList();
