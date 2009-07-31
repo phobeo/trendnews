@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+
+<project default="main" basedir=".">
+
+	<echo message="pulling in property files..."/>
+	<property file="trendnews.build.properties"/>
+
+	<target name="main" depends="check_xml">
+		<echo message="running main build..."/>
+	</target>
+
+    <!-- TODO(phobeo): any lint-like for ruby code?
+	<target name="check_php">
+		<echo message="checking php files (php -l)..."/>
+		<apply executable="php" failonerror="true">
+			<arg value="-l" />
+			<fileset dir=".">
+				<include name="**/*.php" />
+			</fileset>
+		</apply>
+	</target>
+    -->
+	
+    <target name="update_winmo_www" depends="main">
+		<echo message="updating www files in windows mobile widget" />
+		<copy todir="winmowidget">
+			<fileset dir="www">
+				<exclude name="**/*.DS_Store"/>
+			</fileset>
+		</copy>
+    </target>
+    
+    <target name="build_winmo" depends="main, update_winmo_www">
+		<echo message="building windows mobile widget" />
+        <mkdir dir='dist'/>
+        <zip destfile="dist/winmowidget.zip"
+            basedir="winmowidget"
+        />
+        <move file="dist/winmowidget.zip" tofile="dist/trendnews_winmowidget.wgt"/>
+		<echo message="widget copied to dist/trendnews_winmowidget.wgt" />
+	</target>
+    
+	<!-- note: you'll need xerces.jar installed in the ant classpath for eclipse, or the jar file in the same dir -->
+	<target name="check_xml">
+		<echo message="checking xml files..." />
+		<xmlvalidate failonerror="no" lenient="no" warn="yes" classname="org.apache.xerces.parsers.SAXParser">
+			<fileset dir="." includes="**/*.xml" excludes="build.xml" />
+			<attribute name="http://xml.org/sax/features/validation" value="true" />
+			<attribute name="http://apache.org/xml/features/validation/schema" value="true" />
+		</xmlvalidate>
+	</target>
+	
+	<!-- note: you'll need JSCH (http://www.jcraft.com/jsch/) in the ant classpath for eclipse, or the jar file in the directory -->
+	<target name="deploy-production" depends="main">
+		<echo message="deploying to ${servers.production.username}@${servers.production} (please wait, this may take a while)..." />
+		<input message="Please enter password for ${servers.production.username} at ${servers.production}:"
+		    addproperty="servers.production.password"/>
+		<scp todir="${servers.production.username}:${servers.production.password}@${servers.production}:${servers.production.deploydir}" trust="true" sftp="true">
+			<fileset dir="www">
+				<exclude name="**/*.DS_Store"/>
+			</fileset>
+		</scp>
+		<echo message="all files deployed!" />
+	</target>
+    
+    <!-- note: you'll need JSCH (http://www.jcraft.com/jsch/) in the ant classpath for eclipse, or the jar file in the directory -->
+	<target name="deploy-beta" depends="main">
+		<echo message="deploying to ${servers.beta.username}@${servers.beta} (please wait, this may take a while)..." />
+		<input message="Please enter password for ${servers.beta.username} at ${servers.beta}:"
+		    addproperty="servers.production.password"/>
+		<scp todir="${servers.production.username}:${servers.beta.password}@${servers.beta}:${servers.beta.deploydir}" sftp="true" trust="true">
+			<fileset dir="www">
+				<exclude name="**/*.DS_Store"/>
+			</fileset>
+		</scp>
+		<echo message="all files deployed!" />
+	</target>
+
+</project>
