@@ -278,8 +278,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>10</integer>
-									<integer>9</integer>
+									<integer>3</integer>
+									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -333,7 +333,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>E5B7289A1023073400C20E1B</string>
+										<string>E5B728A8102313E100C20E1B</string>
 										<key>history</key>
 										<array>
 											<string>E56220450ED1C705003E7E63</string>
@@ -350,7 +350,8 @@
 											<string>E5A6F8281020C9FB00ED54D3</string>
 											<string>E5A6F8291020C9FB00ED54D3</string>
 											<string>E5A3F1A110219F43002FA981</string>
-											<string>E564180C1023016D008ED78A</string>
+											<string>E5B728A4102313E100C20E1B</string>
+											<string>E5B728A5102313E100C20E1B</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -369,6 +370,7 @@
 											<string>E550899510209F2D00ACBB0F</string>
 											<string>E5A6F4EA1020C04800ED54D3</string>
 											<string>E5A6F8141020C7F300ED54D3</string>
+											<string>E5B728A7102313E100C20E1B</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -562,7 +564,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>E5B7289B1023073400C20E1B</string>
 		<string>E5B7289C1023073400C20E1B</string>
 		<string>E5B72898102306FE00C20E1B</string>
 		<string>1C78EAAD065D492600B07095</string>

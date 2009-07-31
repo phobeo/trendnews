@@ -28,7 +28,7 @@ function loadResultList() {
 }
 
 function DeviceLoad() {
-  var url = "/sample.txt";
+  var url = "/rtve/sample.txt";
   $.getJSON(url, function(data) {
     Results = data;
     loadResultList();
