@@ -1,16 +1,20 @@
 google.load("jquery", "1");
 
+function isWinmoWidget() {
+   return (typeof(window['widget']) == "undefined")?  false: true;
+}
+
 function getNewItemBlock(data) {
 	var trend = data.trend;
 	var imgs = selectImages(data);
 	var contentBlock =	'<div class="item"> \
-				<span class="itemlink">\
+				<span class="itemlink"><a href="#">\
 		    		<span class="title">' + trend + ' ('+data.news.length+' noticias)</span>\
 					<div class="img">';
 	for(var i = 0; i < imgs.length; i++) {
 		contentBlock += '<img alt="'+imgs[i][0]+'" src="'+imgs[i][1]+'" width="90" height="60">';
 	}				
-	contentBlock += '</div></span><div style="clear:both"></div>\
+	contentBlock += '</div></a></span><div style="clear:both"></div>\
 					<div class="news">';
 	
 	for(var i = 0; i < data.news.length; i++) {
@@ -42,7 +46,11 @@ function selectImages(data) {
 }
 
 function showLoading() {
-	$('#content').append("<div class='message'>please wait, loading...</div<div id='loading'> </div>");
+    if(isWinmoWidget()) {
+        $('#content').append("<div class='message'>please wait, loading...</div<br/><div><img src='http://trendnews.info/css/i/loading.gif'></div>");
+    } else {
+	    $('#content').append("<div class='message'>please wait, loading...</div<div id='loading'> </div>");
+    }
 }
 
 function addAnimations() {
@@ -70,7 +78,13 @@ function scaleImages() {
   // against Google web search
   google.setOnLoadCallback(function() {
 	showLoading();
-    $.getJSON("sample.txt",
+    var source = '';
+    if(isWinmoWidget()) {
+        source = 'http://trendnews.info/rtve/sample.txt';
+    } else {
+        source = 'sample.txt';
+    }
+    $.getJSON(source,
       // on search completion, process the results
       function (topics) {
 		var contentBlock = '';
@@ -80,7 +94,8 @@ function scaleImages() {
 		$("#content").html(contentBlock);
 		$(".news").hide();
 		addAnimations();
-		scaleImages()
+		scaleImages();
+        
       });
     });
 

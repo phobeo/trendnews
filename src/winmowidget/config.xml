@@ -5,7 +5,7 @@
   <name>trendnews.info</name> 
   <content src="rtve.html" type="text/html" /> 
   <access network="true" /> 
-  <icon src="css/i/logo.png"/> 
+  <icon src="css/i/logo_square.png"/> 
   <description>Seleccion social de noticias de actualidad</description> 
 </widget> 
 
