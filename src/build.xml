@@ -44,7 +44,9 @@
 	<target name="check_xml">
 		<echo message="checking xml files..." />
 		<xmlvalidate failonerror="no" lenient="no" warn="yes" classname="org.apache.xerces.parsers.SAXParser">
-			<fileset dir="." includes="**/*.xml" excludes="build.xml" />
+			<fileset dir="." excludes="build.xml">
+				<include name="**/*.xml"/>
+			</fileset>
 			<attribute name="http://xml.org/sax/features/validation" value="true" />
 			<attribute name="http://apache.org/xml/features/validation/schema" value="true" />
 		</xmlvalidate>

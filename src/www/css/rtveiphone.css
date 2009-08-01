@@ -18,7 +18,7 @@ background:white;
 border: 1px solid #fff; padding:5px 6px 5px 8px;
 -webkit-border-radius:3px;
 -moz-border-radius:3px;
-font-size: 1.3em;
+font-size: 1em;
 font-weight:bold;
 
 }
@@ -45,7 +45,7 @@ p.plus2 a:visited {color:#212575;}
 .content2  {float:left;text-align:center; width:90%; margin:1em; background: #FFFAEF;-webkit-border-radius:6px;-moz-border-radius:6px;}
 */
 
-.content2 {text-align:center;padding:1em;display:block; clear:both;background:#cfcfcf;-webkit-border-radius:6px;-moz-border-radius:6px;}
+.content2 {text-align:center;padding:1em;display:block; clear:both;background:#cfcfcf;}
 .content2 p {font-size:1em;text-align:center;padding:0.5em;margin:1em;font-weight:bold;}
 
 .item                        {position:relative;border-bottom:1px dashed #b9c4d2;margin:0;overflow:hidden;padding:5px 0 3px 0;}
@@ -125,7 +125,7 @@ text-shadow: #ccc 0 -1px 0;
 
 
 .nav2 {border-top:1px solid #999;text-align:center;padding:1.4em 0;display:block; clear:both;}
-.nav2 a {font-size:1.3em;text-align:center;padding:10px;margin-top:1em;font-weight:bold;color: #212575;background: #cfcfcf;-webkit-border-radius:6px;-moz-border-radius:6px;}
+.nav2 a {font-size:1.3em;text-align:center;padding:0.5em 1em;margin-top:1em;font-weight:bold;color: #212575;background: #cfcfcf;-webkit-border-radius:6px;-moz-border-radius:6px;}
 
 
 
