@@ -32,12 +32,12 @@
     
     <target name="build_winmo" depends="main, update_winmo_www">
 		<echo message="building windows mobile widget" />
-        <mkdir dir='dist'/>
-        <zip destfile="dist/winmowidget.zip"
+        <mkdir dir='../dist'/>
+        <zip destfile="../dist/winmowidget.zip"
             basedir="winmowidget"
         />
-        <move file="dist/winmowidget.zip" tofile="dist/trendnews_winmowidget.wgt"/>
-		<echo message="widget copied to dist/trendnews_winmowidget.wgt" />
+        <move file="../dist/winmowidget.zip" tofile="../dist/trendnews_winmowidget.wgt"/>
+		<echo message="widget copied to ../dist/trendnews_winmowidget.wgt" />
 	</target>
     
 	<!-- note: you'll need xerces.jar installed in the ant classpath for eclipse, or the jar file in the same dir -->
