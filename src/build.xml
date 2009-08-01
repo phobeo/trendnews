@@ -69,10 +69,10 @@
 	<target name="deploy-beta" depends="main">
 		<echo message="deploying to ${servers.beta.username}@${servers.beta} (please wait, this may take a while)..." />
 		<input message="Please enter password for ${servers.beta.username} at ${servers.beta}:"
-		    addproperty="servers.production.password"/>
-		<scp todir="${servers.production.username}:${servers.beta.password}@${servers.beta}:${servers.beta.deploydir}" sftp="true" trust="true">
+		    addproperty="servers.beta.password"/>
+		<scp todir="${servers.beta.username}:${servers.beta.password}@${servers.beta}:${servers.beta.deploydir}" sftp="true" trust="true">
 			<fileset dir="www">
-				<exclude name="**/*.DS_Store"/>
+			<exclude name="**/*.DS_Store"/>
 			</fileset>
 		</scp>
 		<echo message="all files deployed!" />
