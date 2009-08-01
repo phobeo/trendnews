@@ -55,7 +55,8 @@ p.plus2 a:visited {color:#212575;}
 
 .img {margin-left: 0.5em;}
 
-.img img {margin:2px; text-decoration:none; border:0px;}
+.img img {margin:0px; text-decoration:none; border:0px;}
+.img .wrapper {margin:2px;}
 
 .item span.time                 {font-size:1.1em;font-weight:bold;margin:0;padding:0;color:#900;/*background: url("i/play.png") top right no-repeat;background-position:100% 53%;*/}
 .item a                      {text-decoration: none; color: #212575;width:100%;}
@@ -67,6 +68,8 @@ p.plus2 a:visited {color:#212575;}
 .message {font-size:1.3em;font-weight:bold;margin: 6px;text-decoration: none; color: #212575;display:block;text-shadow: #fff 2px 2px 2px; text-align:center;}
 
 .errormessage {font-size:1.3em;font-weight:bold;margin: 6px;text-decoration: none; color: red;display:block;text-shadow: #fff 2px 2px 2px; text-align:center;}
+
+.news {clear:both;}
 
 .newsitem { display:block; clear:both;background: #ffefcf; border: 1px solid #fff; 
 	padding:1em; margin:0.9em;-webkit-border-radius:4px; -moz-border-radius:4px;}

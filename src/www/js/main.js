@@ -10,7 +10,7 @@ function getNewItemBlock(data) {
 	for(var i = 0; i < imgs.length; i++) {
 		contentBlock += '<img alt="'+imgs[i][0]+'" src="'+imgs[i][1]+'" width="90" height="60">';
 	}				
-	contentBlock += '</div></span>\
+	contentBlock += '</div></span><div style="clear:both"></div>\
 					<div class="news">';
 	
 	for(var i = 0; i < data.news.length; i++) {
@@ -56,7 +56,7 @@ function addAnimations() {
 
 function scaleImages() {
 	$(".item img").each(function() {
-    var wrapping = "<div style='overflow:hidden; height:60px; width:90px; float:left;'></div>";
+    var wrapping = "<div style='margin:2px; overflow:hidden; height:60px; width:90px; float:left;'></div>";
 	  $(this).css("width", 90).css("height", "auto").wrap(wrapping);
 	  if($(this).height() < 60) $(this).css("height", '60').css("width", "auto");
 	});
