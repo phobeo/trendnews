@@ -18,7 +18,7 @@ background:white;
 border: 1px solid #fff; padding:5px 6px 5px 8px;
 -webkit-border-radius:3px;
 -moz-border-radius:3px;
-font-size: 1em;
+font-size: 1.3em;
 font-weight:bold;
 
 }
@@ -45,7 +45,7 @@ p.plus2 a:visited {color:#212575;}
 .content2  {float:left;text-align:center; width:90%; margin:1em; background: #FFFAEF;-webkit-border-radius:6px;-moz-border-radius:6px;}
 */
 
-.content2 {text-align:center;padding:1em;display:block; clear:both;background:#cfcfcf;}
+.content2 {text-align:center;padding:1em;display:block; clear:both;background:#cfcfcf;-webkit-border-radius:6px;-moz-border-radius:6px;}
 .content2 p {font-size:1em;text-align:center;padding:0.5em;margin:1em;font-weight:bold;}
 
 .item                        {position:relative;border-bottom:1px dashed #b9c4d2;margin:0;overflow:hidden;padding:5px 0 3px 0;}
@@ -55,8 +55,7 @@ p.plus2 a:visited {color:#212575;}
 
 .img {margin-left: 0.5em;}
 
-.img img {margin:0px; text-decoration:none; border:0px;}
-.img .wrapper {margin:2px;}
+.img img {margin:2px; text-decoration:none; border:0px;}
 
 .item span.time                 {font-size:1.1em;font-weight:bold;margin:0;padding:0;color:#900;/*background: url("i/play.png") top right no-repeat;background-position:100% 53%;*/}
 .item a                      {text-decoration: none; color: #212575;width:100%;}
@@ -68,8 +67,6 @@ p.plus2 a:visited {color:#212575;}
 .message {font-size:1.3em;font-weight:bold;margin: 6px;text-decoration: none; color: #212575;display:block;text-shadow: #fff 2px 2px 2px; text-align:center;}
 
 .errormessage {font-size:1.3em;font-weight:bold;margin: 6px;text-decoration: none; color: red;display:block;text-shadow: #fff 2px 2px 2px; text-align:center;}
-
-.news {clear:both;}
 
 .newsitem { display:block; clear:both;background: #ffefcf; border: 1px solid #fff; 
 	padding:1em; margin:0.9em;-webkit-border-radius:4px; -moz-border-radius:4px;}
@@ -125,7 +122,7 @@ text-shadow: #ccc 0 -1px 0;
 
 
 .nav2 {border-top:1px solid #999;text-align:center;padding:1.4em 0;display:block; clear:both;}
-.nav2 a {font-size:1.3em;text-align:center;padding:0.5em 1em;margin-top:1em;font-weight:bold;color: #212575;background: #cfcfcf;-webkit-border-radius:6px;-moz-border-radius:6px;}
+.nav2 a {font-size:1.3em;text-align:center;padding:10px;margin-top:1em;font-weight:bold;color: #212575;background: #cfcfcf;-webkit-border-radius:6px;-moz-border-radius:6px;}
 
 
 

@@ -5,12 +5,12 @@ function getNewItemBlock(data) {
 	var imgs = selectImages(data);
 	var contentBlock =	'<div class="item"> \
 				<span class="itemlink">\
-		    		<span class="title">' + trend + ' ('+data.news.length+' noticias)</span>\
+		    		<span class="title"><a href="#">' + trend + ' ('+data.news.length+' noticias)</a></span>\
 					<div class="img">';
 	for(var i = 0; i < imgs.length; i++) {
 		contentBlock += '<img alt="'+imgs[i][0]+'" src="'+imgs[i][1]+'" width="90" height="60">';
 	}				
-	contentBlock += '</div></span><div style="clear:both"></div>\
+	contentBlock += '</div></span>\
 					<div class="news">';
 	
 	for(var i = 0; i < data.news.length; i++) {
@@ -55,11 +55,7 @@ function addAnimations() {
 }
 
 function scaleImages() {
-	$(".item img").each(function() {
-    var wrapping = "<div style='margin:2px; overflow:hidden; height:60px; width:90px; float:left;'></div>";
-	  $(this).css("width", 90).css("height", "auto").wrap(wrapping);
-	  if($(this).height() < 60) $(this).css("height", '60').css("width", "auto");
-	});
+	// TODO
 }
 
 
@@ -70,7 +66,7 @@ function scaleImages() {
   // against Google web search
   google.setOnLoadCallback(function() {
 	showLoading();
-    $.getJSON("sample.txt",
+    $.getJSON("http://trendnews.info/rtve/sample.txt?callback=?",
       // on search completion, process the results
       function (topics) {
 		var contentBlock = '';
