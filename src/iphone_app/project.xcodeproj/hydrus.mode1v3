@@ -314,8 +314,6 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -333,7 +331,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>E5B728B11023176200C20E1B</string>
+										<string>E5B728C81023483500C20E1B</string>
 										<key>history</key>
 										<array>
 											<string>E56220450ED1C705003E7E63</string>
@@ -391,6 +389,8 @@
 							<string>458pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -565,10 +565,10 @@
 	<array>
 		<string>E5B728BC1023176200C20E1B</string>
 		<string>E5B728BD1023176200C20E1B</string>
+		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>E5C145200ECF484100941581</string>
 		<string>/Users/hydrus/trendnews/src/iphone_app/project.xcodeproj</string>
-		<string>1C78EAAD065D492600B07095</string>
 	</array>
 	<key>WindowString</key>
 	<string>29 105 1280 773 0 0 1440 878 </string>
@@ -942,7 +942,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>Identifier</key>
